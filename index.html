@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TechNova Solutions</title>
+<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    
+<div class="header">
+    <h1>TechNova Solutions</h1>
+</div>
+
+
+
+<div class="intro-section">
+
+    <div class="left-image">
+        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+    </div>
+
+    <div class="right-text">
+        <h2>Welcome</h2>
+        <p>
+            TechNova Solutions provides innovative software, cloud services, 
+            and modern digital solutions for businesses worldwide.
+        </p>
+    </div>
+
+</div>
+
+
+
+<h2 class="gallery-title">Image Gallery</h2>
+
+<div class="gallery" id="gallery">
+
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692">
+    <img src="https://images.unsplash.com/photo-1531498860502-7c67cf02f657">
+    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4">
+
+</div>
+
+
+
+<div class="row">
+    <div class="box">
+        <h3>Company Details</h3>
+        <p>Founded: 2020</p>
+        <p>Employees: 200+</p>
+    </div>
+
+    <div class="box">
+        <h3>Management</h3>
+        <p>CEO: John Smith</p>
+        <p>CTO: Alice Brown</p>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="box">
+        <h3>Head Office</h3>
+        <p>Vijayawada</p>
+        <p>Andhra Pradesh</p>
+    </div>
+
+    <div class="box">
+        <h3>Branch</h3>
+        <p>Hyderabad</p>
+        <p>Telangana</p>
+    </div>
+</div>
+
+
+
+<div class="contact" id="contactBox">
+    <h3>Contact Us</h3>
+    <p>Email: technova@gmail.com</p>
+    <p>Phone: 9876543210</p>
+</div>
+
+
+
+<div class="footer">
+    <p>© 2026 TechNova Solutions</p>
+</div>
+
+<script >
+
+
+let contact = document.getElementById("contactBox");
+
+contact.onclick = function(){
+    contact.style.background = "green";
+};
+
+
+let gallery = document.getElementById("gallery");
+let position = 0;
+
+function slide(){
+    position -= 1;
+    gallery.style.transform = "translateX(" + position + "px)";
+
+    if(position < -200){
+        position = 0;
+    }
+}
+setInterval(slide, 30);
+</script>
+</body>
+</html>
